@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+   <head>
+		<script src="jquery-2.1.3.min.js"></script>
+        <script src="jquery-ui.js"></script>
+        
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link rel="stylesheet" href="style.css">
+     <link rel="stylesheet" href="jquery-ui.css">
+      <meta charset="utf-8">
+      <title>
+         Информация для операторов КЦ VRost
+      </title>
+   </head>
+   <body>
+   
+   <script>
+   $("body").css("overflow","hidden");
+   
+	jQuery(document).ready(function () {
+		$("#accordion").accordion({
+				heightStyle: "content"
+				});	
+		});
+	</script>
+    
+	<script>
+		function checkPas () {
+			if (document.getElementById("pas").value == "111") {
+					$( "#conteinerPas" ).hide( "drop", { direction: "left" }, "slow"  );	
+					$( "footer" ).show( "drop", { direction: "down" }, "slow"  );	
+				}
+			else {
+					$( "form" ).effect( "shake", 500 );
+					var obj=document.getElementById("pas");
+					obj.value="Пароль не верный";
+				}
+			}
+   </script>
+   
+   <script>
+   
+   		function menuClose () {
+			$( "#conteinerNews" ).hide( "drop", { direction: "left" }, "slow"  );
+			$( "#conteinerFAQ" ).hide( "drop", { direction: "left" }, "slow"  );
+			}
+			
+   		function menu (id) {
+				menuClose();
+				
+				$( '#'+id ).delay(500).show( "drop", { direction: "left" }, "slow"  );
+			}
+   </script>
+   
+   <div id="conteinerPas">
+       <section>
+            <article>
+       		<img src="img/logo.gif">
+                <form>
+                    <input type="text" name="" placeholder="пароль" id="pas" />
+                    <input type="button" name="" value="Вход" onclick="checkPas ()">
+				</form>
+                
+                
+            </article>
+       </section>
+   </div>
+   
+   <div id="conteinerFAQ">
+       <section >
+            <article>
+                <div id="accordion">
+                    <h3>First</h3>
+                    <div>Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.</div>
+                    <h3>Second</h3>
+                    <div>Phasellus mattis tincidunt nibh.</div>
+                    <h3>Third</h3>
+                    <div>Nam dui erat, auctor a, dignissim quis.</div>
+                                        <h3>Third</h3>
+                    <div>Nam dui erat, auctor a, dignissim quis.</div>
+                                        <h3>Third</h3>
+                    <div>Nam dui erat, auctor a, dignissim quis.</div>
+                                        <h3>Third</h3>
+                    <div>Nam dui erat, auctor a, dignissim quis.</div>
+                </div>
+            </article>
+       </section>
+       </section>
+   </div>
+   
+   <div id="conteinerNews">
+       <section>
+            <article>
+				asdafsad
+                
+                
+<script type="text/javascript" src="//vk.com/js/api/openapi.js?116"></script>
+
+<!-- VK Widget -->
+<div id="vk_groups"></div>
+<script type="text/javascript">
+VK.Widgets.Group("vk_groups", {mode: 2,  width: "960", height: "600", color1: 'FFFFFF', color2: 'FFFFFF', color3: '0E154C'}, 92518188);
+</script>
+
+
+
+
+
+            </article>
+       </section>
+   </div>
+
+		<footer>
+			<nav>
+				<ul class="hr">
+					<li onclick="menu ('conteinerNews')">Новости</li>
+					<li onclick="menu ('conteinerFAQ')">FAQ</li>
+				</ul>
+            </nav>
+		</footer>
+   </body>
+</html>
